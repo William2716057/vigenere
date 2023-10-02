@@ -1,13 +1,15 @@
 
-#code to encrypt message 
-message = "Message to be encoded" # add message here
+#code to encrypt message
+#message = "Message to be encoded" # add message here
+message = input("Enter message to be encoded: ")
 plaintext = message.replace(" ", "")
 plaintext = message.lower()
 
 #plaintext with spaces removed 
 print("spaces removed: " + plaintext)
 #keyword 
-key = "keyword" #add desired keyword here
+#key = "keyword" #add desired keyword here
+key = input("Enter key to be used: ")
 #keyword will be repeated until the length matches the plaintext 
 key2 = key * (len(plaintext) // len(key)) + key[:len(plaintext) % len(key)]
 print("key repeated to meet length of plaintext: " + key2)
