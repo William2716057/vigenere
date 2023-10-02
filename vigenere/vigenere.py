@@ -1,6 +1,5 @@
 
 #code to encrypt message
-#message = "Message to be encoded" # add message here
 message = input("Enter message to be encoded: ")
 plaintext = message.replace(" ", "")
 plaintext = message.lower()
