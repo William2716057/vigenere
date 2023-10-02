@@ -2,6 +2,7 @@
 #code to encrypt message 
 message = "Message to be encoded" # add message here
 plaintext = message.replace(" ", "")
+plaintext = message.lower()
 
 #plaintext with spaces removed 
 print("spaces removed: " + plaintext)
