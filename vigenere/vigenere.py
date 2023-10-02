@@ -1,4 +1,5 @@
 
+#code to encrypt message 
 message = "Message to be encoded" # add message here
 plaintext = message.replace(" ", "")
 
@@ -57,6 +58,33 @@ def backToLetters(final):
 final = enciphered
 letters = backToLetters(final)
 
-print(letters)
+print("result: " + letters)
+
+print("Back to plaintext")
+#code to decrypt message back to plaintext
+
+#take encrypted message 
+print("encryption: " + letters)
+print(enciphered)
+#keyword position numbers
+print("keyword: " + key2)
+print(keyPos)
+
+#subtract keyword position numbers from encrypted message position numbers 
+#(enciphered - keyPos)
+def subtraction(encryptedPositions, keyPositions):
+    result = []
+
+    for i in range(len(encryptedPositions)):
+        difference = (encryptedPositions[i] - keyPositions[i]) % 26
+
+        result.append(difference)
+    return result
+
+decipheredPositions = subtraction(enciphered, keyPos)
+print(decipheredPositions)
+
+originalMessage = backToLetters(decipheredPositions)
+print("Original Message: " + originalMessage)
 
 
